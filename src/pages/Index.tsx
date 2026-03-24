@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { ArrowRight, Code, Zap, Users, Github, Linkedin, Mail, ExternalLink, Star } from "lucide-react"
+import Icon from "@/components/ui/icon"
 
 export default function Portfolio() {
   return (
@@ -10,7 +10,7 @@ export default function Portfolio() {
       <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md border-b z-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <div className="font-bold text-xl text-slate-900">CodePulse</div>
+            <div className="font-bold text-xl text-slate-900">DevPortfolio</div>
             <div className="hidden md:flex space-x-8">
               <a href="#about" className="text-slate-600 hover:text-slate-900 transition-colors">
                 Обо мне
@@ -34,18 +34,18 @@ export default function Portfolio() {
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <Badge className="mb-4 bg-blue-100 text-blue-800 hover:bg-blue-200">Открыт для проектов</Badge>
+              <Badge className="mb-4 bg-blue-100 text-blue-800 hover:bg-blue-200">Открыт для новых проектов</Badge>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 mb-6 leading-tight">
-                Помогаю разработчикам <span className="text-blue-600">создавать</span> веб-приложения быстрее
+                Разрабатываю веб-приложения, которые <span className="text-blue-600">работают</span> на результат
               </h1>
               <p className="text-xl text-slate-600 mb-8 leading-relaxed">
-                Специализируюсь на создании современных, масштабируемых веб-приложений с использованием
-                передовых технологий. Превращу ваши идеи в мощные цифровые решения.
+                Full-stack разработчик с фокусом на чистый код, скорость и удобство пользователей.
+                Беру задачу — довожу до готового продукта.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
-                  Начать проект
-                  <ArrowRight className="ml-2 h-4 w-4" />
+                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white">
+                  Обсудить проект
+                  <Icon name="ArrowRight" size={16} className="ml-2" />
                 </Button>
                 <Button variant="outline" size="lg">
                   Смотреть работы
@@ -54,18 +54,22 @@ export default function Portfolio() {
             </div>
             <div className="relative">
               <div className="bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl p-8 text-white">
-                <div className="space-y-4">
+                <div className="space-y-5">
                   <div className="flex items-center gap-3">
-                    <Code className="h-6 w-6" />
-                    <span className="font-semibold">Современный стек</span>
+                    <Icon name="Code" size={24} />
+                    <span className="font-semibold">React, TypeScript, Python</span>
                   </div>
                   <div className="flex items-center gap-3">
-                    <Zap className="h-6 w-6" />
-                    <span className="font-semibold">Быстрая разработка</span>
+                    <Icon name="Zap" size={24} />
+                    <span className="font-semibold">Быстрая сдача, чистый код</span>
                   </div>
                   <div className="flex items-center gap-3">
-                    <Users className="h-6 w-6" />
-                    <span className="font-semibold">Решения для разработчиков</span>
+                    <Icon name="Users" size={24} />
+                    <span className="font-semibold">Работаю с бизнесом и стартапами</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <Icon name="ShieldCheck" size={24} />
+                    <span className="font-semibold">Поддержка после запуска</span>
                   </div>
                 </div>
               </div>
@@ -80,17 +84,17 @@ export default function Portfolio() {
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">Обо мне</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Увлеченный full-stack разработчик с экспертизой в современных веб-технологиях
+              Full-stack разработчик с опытом создания продуктов с нуля до релиза
             </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-6">Создаю будущее веб-разработки</h3>
+              <h3 className="text-2xl font-bold text-slate-900 mb-6">Пишу код — думаю о продукте</h3>
               <p className="text-slate-600 mb-6 leading-relaxed">
-                За 5+ лет опыта в веб-разработке я помог десяткам разработчиков и стартапов
-                воплотить их идеи в жизнь. Мой фокус — создание эффективных, масштабируемых
-                и поддерживаемых решений с использованием актуальных технологий.
+                Более 5 лет занимаюсь разработкой веб-приложений для бизнеса, стартапов и digital-агентств.
+                Умею слышать задачу, предлагать решения и выпускать продукт в срок. Работаю как самостоятельно,
+                так и в команде.
               </p>
               <div className="grid grid-cols-2 gap-4 mb-6">
                 <div>
@@ -99,23 +103,37 @@ export default function Portfolio() {
                     <Badge variant="secondary">React</Badge>
                     <Badge variant="secondary">Next.js</Badge>
                     <Badge variant="secondary">TypeScript</Badge>
-                    <Badge variant="secondary">Tailwind</Badge>
+                    <Badge variant="secondary">Tailwind CSS</Badge>
                   </div>
                 </div>
                 <div>
                   <h4 className="font-semibold text-slate-900 mb-2">Backend</h4>
                   <div className="flex flex-wrap gap-2">
-                    <Badge variant="secondary">Node.js</Badge>
                     <Badge variant="secondary">Python</Badge>
+                    <Badge variant="secondary">Node.js</Badge>
                     <Badge variant="secondary">PostgreSQL</Badge>
-                    <Badge variant="secondary">MongoDB</Badge>
+                    <Badge variant="secondary">REST API</Badge>
                   </div>
+                </div>
+              </div>
+              <div className="flex gap-6 text-center">
+                <div>
+                  <p className="text-3xl font-bold text-blue-600">30+</p>
+                  <p className="text-sm text-slate-600">проектов</p>
+                </div>
+                <div>
+                  <p className="text-3xl font-bold text-blue-600">5+</p>
+                  <p className="text-sm text-slate-600">лет опыта</p>
+                </div>
+                <div>
+                  <p className="text-3xl font-bold text-blue-600">100%</p>
+                  <p className="text-sm text-slate-600">довольных клиентов</p>
                 </div>
               </div>
             </div>
             <div className="relative">
               <img
-                src="/developer-workspace.png"
+                src="https://cdn.poehali.dev/projects/ca1a3e44-75c4-499b-bfd3-b12987fbd89b/files/2d6d53dd-4f7d-4fd0-bec4-0f9cdaa392d4.jpg"
                 alt="Рабочее место разработчика"
                 className="rounded-2xl shadow-lg w-full max-w-[400px] h-auto"
               />
@@ -128,9 +146,9 @@ export default function Portfolio() {
       <section id="services" className="py-20 bg-slate-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">Услуги</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">Чем могу помочь</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Полный спектр услуг веб-разработки для ускорения вашего проекта
+              Разработка под ключ — от идеи до работающего продукта
             </p>
           </div>
 
@@ -138,19 +156,19 @@ export default function Portfolio() {
             <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow">
               <CardHeader>
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                  <Code className="h-6 w-6 text-blue-600" />
+                  <Icon name="Code" size={24} className="text-blue-600" />
                 </div>
-                <CardTitle>Full-Stack разработка</CardTitle>
+                <CardTitle>Веб-разработка под ключ</CardTitle>
                 <CardDescription>
-                  Комплексная разработка веб-приложений с использованием современных фреймворков и лучших практик.
+                  Создам современное веб-приложение или сайт с нуля — от дизайна до деплоя.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2 text-sm text-slate-600">
-                  <li>* React/Next.js приложения</li>
-                  <li>* Разработка и интеграция API</li>
-                  <li>* Проектирование баз данных</li>
-                  <li>* Аутентификация и безопасность</li>
+                  <li>✓ SPA и многостраничные сайты</li>
+                  <li>✓ Личные кабинеты и дашборды</li>
+                  <li>✓ Интеграция с CRM и API</li>
+                  <li>✓ Адаптивный дизайн</li>
                 </ul>
               </CardContent>
             </Card>
@@ -158,17 +176,17 @@ export default function Portfolio() {
             <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow">
               <CardHeader>
                 <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
-                  <Zap className="h-6 w-6 text-green-600" />
+                  <Icon name="Zap" size={24} className="text-green-600" />
                 </div>
-                <CardTitle>Оптимизация</CardTitle>
-                <CardDescription>Ускорение существующих приложений и улучшение пользовательского опыта.</CardDescription>
+                <CardTitle>Оптимизация и доработка</CardTitle>
+                <CardDescription>Разберусь в чужом коде, исправлю баги и ускорю существующий проект.</CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2 text-sm text-slate-600">
-                  <li>* Code Splitting и Lazy Loading</li>
-                  <li>* Оптимизация размера бандла</li>
-                  <li>* SEO и Core Web Vitals</li>
-                  <li>* Мониторинг производительности</li>
+                  <li>✓ Рефакторинг и чистка кода</li>
+                  <li>✓ Ускорение загрузки страниц</li>
+                  <li>✓ SEO и Core Web Vitals</li>
+                  <li>✓ Исправление критических ошибок</li>
                 </ul>
               </CardContent>
             </Card>
@@ -176,17 +194,17 @@ export default function Portfolio() {
             <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow">
               <CardHeader>
                 <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-                  <Users className="h-6 w-6 text-purple-600" />
+                  <Icon name="Rocket" size={24} className="text-purple-600" />
                 </div>
-                <CardTitle>Менторство</CardTitle>
-                <CardDescription>Индивидуальное наставничество для развития навыков разработчиков.</CardDescription>
+                <CardTitle>MVP для стартапов</CardTitle>
+                <CardDescription>Помогу быстро запустить первую версию продукта и проверить гипотезу.</CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2 text-sm text-slate-600">
-                  <li>* Code Review и лучшие практики</li>
-                  <li>* Планирование архитектуры</li>
-                  <li>* Развитие карьеры</li>
-                  <li>* Подготовка к собеседованиям</li>
+                  <li>✓ Минимальный жизнеспособный продукт</li>
+                  <li>✓ Аутентификация и базы данных</li>
+                  <li>✓ Платёжные интеграции</li>
+                  <li>✓ Готов к масштабированию</li>
                 </ul>
               </CardContent>
             </Card>
@@ -200,7 +218,7 @@ export default function Portfolio() {
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">Избранные проекты</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Недавние работы, которые помогли разработчикам создать отличные приложения
+              Проекты, в которых я горжусь результатом
             </p>
           </div>
 
@@ -208,7 +226,7 @@ export default function Portfolio() {
             <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow overflow-hidden">
               <div className="relative h-48 bg-gradient-to-r from-blue-500 to-purple-600">
                 <img
-                  src="/modern-web-dashboard.png"
+                  src="https://cdn.poehali.dev/projects/ca1a3e44-75c4-499b-bfd3-b12987fbd89b/files/059a6eac-b087-41bd-a12f-b9c440023b47.jpg"
                   alt="SaaS дашборд"
                   className="absolute inset-0 w-full h-full object-cover"
                 />
@@ -216,17 +234,17 @@ export default function Portfolio() {
               <CardHeader>
                 <div className="flex justify-between items-start">
                   <div>
-                    <CardTitle>SaaS-платформа</CardTitle>
+                    <CardTitle>Аналитический дашборд</CardTitle>
                     <CardDescription>
-                      Комплексный дашборд для управления SaaS-приложениями с аналитикой в реальном времени.
+                      SaaS-платформа с аналитикой в реальном времени, графиками и управлением командой.
                     </CardDescription>
                   </div>
                   <div className="flex gap-2">
                     <Button variant="ghost" size="icon">
-                      <Github className="h-4 w-4" />
+                      <Icon name="Github" size={16} />
                     </Button>
                     <Button variant="ghost" size="icon">
-                      <ExternalLink className="h-4 w-4" />
+                      <Icon name="ExternalLink" size={16} />
                     </Button>
                   </div>
                 </div>
@@ -235,12 +253,12 @@ export default function Portfolio() {
                 <div className="flex flex-wrap gap-2 mb-4">
                   <Badge variant="outline">Next.js</Badge>
                   <Badge variant="outline">TypeScript</Badge>
-                  <Badge variant="outline">Prisma</Badge>
+                  <Badge variant="outline">PostgreSQL</Badge>
                   <Badge variant="outline">Tailwind</Badge>
                 </div>
                 <div className="flex items-center gap-2 text-sm text-slate-600">
-                  <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                  <span>В топе Product Hunt</span>
+                  <Icon name="Star" size={16} className="fill-yellow-400 text-yellow-400" />
+                  <span>Запущен и приносит прибыль клиенту</span>
                 </div>
               </CardContent>
             </Card>
@@ -248,7 +266,7 @@ export default function Portfolio() {
             <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow overflow-hidden">
               <div className="relative h-48 bg-gradient-to-r from-green-500 to-blue-600">
                 <img
-                  src="/ecommerce-mobile-app.png"
+                  src="https://cdn.poehali.dev/projects/ca1a3e44-75c4-499b-bfd3-b12987fbd89b/files/6f23ca4d-5751-4614-82a6-3ab159108b4b.jpg"
                   alt="Мобильное приложение"
                   className="absolute inset-0 w-full h-full object-cover"
                 />
@@ -256,31 +274,31 @@ export default function Portfolio() {
               <CardHeader>
                 <div className="flex justify-between items-start">
                   <div>
-                    <CardTitle>E-commerce приложение</CardTitle>
+                    <CardTitle>Интернет-магазин</CardTitle>
                     <CardDescription>
-                      React Native приложение с удобным шопингом и интеграцией платежей.
+                      Полноценный e-commerce с каталогом, корзиной, оплатой и личным кабинетом.
                     </CardDescription>
                   </div>
                   <div className="flex gap-2">
                     <Button variant="ghost" size="icon">
-                      <Github className="h-4 w-4" />
+                      <Icon name="Github" size={16} />
                     </Button>
                     <Button variant="ghost" size="icon">
-                      <ExternalLink className="h-4 w-4" />
+                      <Icon name="ExternalLink" size={16} />
                     </Button>
                   </div>
                 </div>
               </CardHeader>
               <CardContent>
                 <div className="flex flex-wrap gap-2 mb-4">
-                  <Badge variant="outline">React Native</Badge>
+                  <Badge variant="outline">React</Badge>
                   <Badge variant="outline">Node.js</Badge>
                   <Badge variant="outline">MongoDB</Badge>
                   <Badge variant="outline">Stripe</Badge>
                 </div>
                 <div className="flex items-center gap-2 text-sm text-slate-600">
-                  <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                  <span>10 000+ загрузок</span>
+                  <Icon name="Star" size={16} className="fill-yellow-400 text-yellow-400" />
+                  <span>Оборот клиента вырос на 40% после запуска</span>
                 </div>
               </CardContent>
             </Card>
@@ -292,9 +310,9 @@ export default function Portfolio() {
       <section id="contact" className="py-20 bg-slate-900 text-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4">Создадим что-то потрясающее</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4">Готовы начать проект?</h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Готовы ускорить процесс разработки? Давайте обсудим ваш проект.
+              Напишите — обсудим задачу, сроки и стоимость. Отвечаю в течение нескольких часов.
             </p>
           </div>
 
@@ -302,14 +320,14 @@ export default function Portfolio() {
             <div>
               <h3 className="text-2xl font-bold mb-6">Связаться со мной</h3>
               <p className="text-slate-300 mb-8 leading-relaxed">
-                Будь то стартап, которому нужен MVP, или компания, желающая модернизировать
-                технологический стек — я помогу вам добиться успеха.
+                Работаю с бизнесами, стартапами и агентствами. Готов взяться за новый проект
+                или помочь с доработкой существующего.
               </p>
 
               <div className="space-y-4">
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
-                    <Mail className="h-6 w-6" />
+                    <Icon name="Mail" size={24} />
                   </div>
                   <div>
                     <p className="font-semibold">Email</p>
@@ -319,21 +337,21 @@ export default function Portfolio() {
 
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
-                    <Github className="h-6 w-6" />
+                    <Icon name="Github" size={24} />
                   </div>
                   <div>
                     <p className="font-semibold">GitHub</p>
-                    <p className="text-slate-300">@codepulse</p>
+                    <p className="text-slate-300">@your-github</p>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
-                    <Linkedin className="h-6 w-6" />
+                    <Icon name="MessageCircle" size={24} />
                   </div>
                   <div>
-                    <p className="font-semibold">LinkedIn</p>
-                    <p className="text-slate-300">@codepulse-dev</p>
+                    <p className="font-semibold">Telegram</p>
+                    <p className="text-slate-300">@your-telegram</p>
                   </div>
                 </div>
               </div>
@@ -341,9 +359,9 @@ export default function Portfolio() {
 
             <Card className="bg-slate-800 border-slate-700">
               <CardHeader>
-                <CardTitle className="text-white">Начать проект</CardTitle>
+                <CardTitle className="text-white">Оставить заявку</CardTitle>
                 <CardDescription className="text-slate-300">
-                  Расскажите о проекте, и обсудим, как я могу помочь.
+                  Расскажите о задаче — я свяжусь с вами и предложу решение.
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
@@ -357,11 +375,11 @@ export default function Portfolio() {
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-slate-300 mb-2">Фамилия</label>
+                    <label className="block text-sm font-medium text-slate-300 mb-2">Телефон / Telegram</label>
                     <input
                       type="text"
                       className="w-full px-3 py-2 bg-slate-700 border border-slate-600 rounded-md text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                      placeholder="Иванов"
+                      placeholder="+7 999 000-00-00"
                     />
                   </div>
                 </div>
@@ -374,16 +392,16 @@ export default function Portfolio() {
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-slate-300 mb-2">О проекте</label>
+                  <label className="block text-sm font-medium text-slate-300 mb-2">Расскажите о проекте</label>
                   <textarea
                     rows={4}
                     className="w-full px-3 py-2 bg-slate-700 border border-slate-600 rounded-md text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    placeholder="Расскажите о вашем проекте..."
+                    placeholder="Что нужно сделать, в какие сроки, есть ли дизайн..."
                   />
                 </div>
-                <Button className="w-full bg-blue-600 hover:bg-blue-700">
-                  Отправить
-                  <ArrowRight className="ml-2 h-4 w-4" />
+                <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">
+                  Отправить заявку
+                  <Icon name="ArrowRight" size={16} className="ml-2" />
                 </Button>
               </CardContent>
             </Card>
@@ -395,9 +413,9 @@ export default function Portfolio() {
       <footer className="bg-slate-950 text-slate-400 py-8">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="font-bold text-xl text-white mb-4 md:mb-0">CodePulse</div>
+            <div className="font-bold text-xl text-white mb-4 md:mb-0">DevPortfolio</div>
             <p className="text-center md:text-right">
-              2024 CodePulse. Помогаю разработчикам создавать быстрые и качественные веб-приложения.
+              © 2026 DevPortfolio. Разрабатываю веб-приложения, которые работают на результат.
             </p>
           </div>
         </div>
